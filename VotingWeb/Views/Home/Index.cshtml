@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Service Fabric Voting Sample";
+}
+
+<div ng-controller="VotingAppController" ng-init="refresh()">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 text-center">
+                <h2>Service Fabric Scaling Test</h2>
+            </div>
+        </div>
+
+        <hr />
+
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="row">
+                    <div class="col-xs-4">
+                        Current frequency {{frequency.data.Value}}
+                    </div>
+                </div>
+
+                <hr />
+                
+                <div class="row">
+                    <form class="col-xs-12 center-block">
+                        <div class="col-xs-6 form-group">
+                            <input id="txtAdd" type="text" class="form-control" placeholder="Set task frequency (1 to 100,000,000)" ng-model="newFrequency" />
+                        </div>
+                        <div class="col-xs-6 form-group">
+                            <button id="btnAdd" class="btn btn-success btn-block" ng-click="setFrequency(newFrequency)">
+                                <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+                                Set
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
